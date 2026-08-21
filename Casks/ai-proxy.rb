@@ -1,12 +1,12 @@
 cask "ai-proxy" do
-  version "0.3.2"
+  version "0.3.3"
 
   on_arm do
-    sha256 "929da2cc974f046801ded8c15380d7a6d85b75d48c7be0c9f788f707df73a3a3"
+    sha256 "dd4e69b3ddc7f7dac5ae6dc62574b4d73a56213943d5f6bbe060f5e03119a7ca"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
   end
   on_intel do
-    sha256 "7d09a9c20d4580900a3a7dc39cdafff6e3c9ddfd8610966ec56224c2a0db4a51"
+    sha256 "6d8e99288d023b2fe45affaa6d4b38dcac725e104ff1e8ba637c504e306248fd"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_x64.app.tar.gz"
   end
 
@@ -15,6 +15,11 @@ cask "ai-proxy" do
   homepage "https://aiproxy.meta-thinking.net"
 
   app "AI-Proxy.app"
+
+  zap trash: [
+    "~/Library/Application Support/AI-Proxy",
+    "~/Library/Application Support/com.metathinking.ai-proxy.desktop",
+  ]
 
   caveats <<~EOS
     AI-Proxy is ad-hoc signed (not yet notarized by Apple), so the FIRST launch
@@ -30,8 +35,8 @@ cask "ai-proxy" do
 
     From 0.3.2 the app checks for updates and can install them in one click.
 
-    Free forever: text models, your subscriptions, Ollama, one API key.
-    Pro (image/video/voice + quick configs): https://aiproxy.meta-thinking.net/pricing
+    Everything is free — sign in once to unlock one-click client configs.
+    Plans: https://aiproxy.meta-thinking.net/pricing
     Docs: https://aiproxy.meta-thinking.net/docs
   EOS
 end

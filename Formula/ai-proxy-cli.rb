@@ -1,21 +1,27 @@
 class AiProxyCli < Formula
   desc "Headless AI-Proxy: your AI subscriptions as one OpenAI-compatible endpoint"
   homepage "https://aiproxy.meta-thinking.net"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-arm64.tar.gz"
-      sha256 "91b685e2dbe1eaccefa5d743152c4bb190065fb8c457efd748c4651ce4e2d8c8"
+      sha256 "a7d337cfd5a45729f24d0cc7641836fb843f3e87c296324693686b4c98d71387"
     end
     on_intel do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-amd64.tar.gz"
-      sha256 "d73dfc789d300f8d1d5ff9b8ea7272ac8ca1790aacc59dd265fad667af751f6d"
+      sha256 "8ccf1a650b08462e5d74bc7d6ef8be690dca319155d3ab8975b1e5c59bcf7adc"
     end
   end
   on_linux do
-    url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-amd64.tar.gz"
-    sha256 "1162f012e36061fdda9c473700a830ba260dd010190858a5e9e13312d8945dc9"
+    on_arm do
+      url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-arm64.tar.gz"
+      sha256 "16215a552e96eda56f00ccec7400eff4a0fd3a5c87562257cf9285f224f6c982"
+    end
+    on_intel do
+      url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-amd64.tar.gz"
+      sha256 "6d6087aa4e62f723183c0e95adafe31fe39455a844ee11d6e8148b0789125b5f"
+    end
   end
 
   def install
@@ -30,8 +36,8 @@ class AiProxyCli < Formula
         ai-proxy start            # gateway on :8317
         ai-proxy service-install  # macOS: auto-start + auto-restart (launchd)
       Health probe (no key, no tokens): curl -s http://localhost:8317/health
-      Pro unlock (image/video/voice; the gateway itself is free forever):
-        export AIPROXY_LICENSE_KEY=ap_sk_...   # aiproxy.meta-thinking.net/dashboard
+      Everything is free — sign in at aiproxy.meta-thinking.net for client quick-configs.
+        export AIPROXY_LICENSE_KEY=ap_sk_...   # links this machine to your account
       Docs: https://aiproxy.meta-thinking.net/docs
     EOS
   end
