@@ -1,26 +1,26 @@
 class AiProxyCli < Formula
   desc "Headless AI-Proxy: your AI subscriptions as one OpenAI-compatible endpoint"
   homepage "https://aiproxy.meta-thinking.net"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-arm64.tar.gz"
-      sha256 "378cd012f592bb9d92a5162bff9d9ccc8d9c95fae07233c9c01d33232e467162"
+      sha256 "8bbb5d115fb5941a4fead48d2ac4c1a1c2c416665efc70c9ea48c433041ca121"
     end
     on_intel do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-darwin-amd64.tar.gz"
-      sha256 "8407c73e17678355594ed4ce1bbaeea15f672749e4eaee1109e770fd88d2e689"
+      sha256 "409ad01b41fe107233e90ca2ff6a6a483584c878f23f95bf884c4e760f7e8286"
     end
   end
   on_linux do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-arm64.tar.gz"
-      sha256 "84bbfc218ed5b08513ed6c74e300ea52173c5b39f27af074e62ddde3bc46c816"
+      sha256 "6b2da4f031135385cfe9671e45632f62dd982c927a18245b91d6b97f0c74088f"
     end
     on_intel do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/ai-proxy-cli-linux-amd64.tar.gz"
-      sha256 "95aab6a6d85d03c6de22a977c24727765308e85ead0c64069946f334da285636"
+      sha256 "9935964a6c6d2f6c43d4a5be17c272f687480741b1b3ab25364702989d6014d9"
     end
   end
 

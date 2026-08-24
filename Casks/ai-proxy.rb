@@ -1,12 +1,12 @@
 cask "ai-proxy" do
-  version "0.3.4"
+  version "0.3.5"
 
   on_arm do
-    sha256 "3e56b98af65b8d61f0be94bb3af4430564edb76d31e4cbfd484921477a49d064"
+    sha256 "7800500fcdeb433e37cb4a4ed99d1270203196df9d00c95ae314f010e9aadeeb"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_aarch64.app.tar.gz"
   end
   on_intel do
-    sha256 "c4a3d9cff7da4a15aa8caf3b9db9419270556151d749158e23a6bab4be3d15e8"
+    sha256 "a4390b66995af467ca2eed420f979bcbb32fc15e3d710eb91f0d15b32597b60a"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/desktop-v#{version}/AI-Proxy_#{version}_x64.app.tar.gz"
   end
 
@@ -33,7 +33,8 @@ cask "ai-proxy" do
           System Settings -> Privacy & Security -> "Open Anyway", or run:
         xattr -dr com.apple.quarantine "/Applications/AI-Proxy.app"
 
-    From 0.3.2 the app checks for updates and can install them in one click.
+    From 0.3.5 image and video models work through your agents, and generated
+    media is kept in ~/.ai-proxy/generated-content (emptied from the Server tab).
 
     Everything is free — sign in once to unlock one-click client configs.
     Plans: https://aiproxy.meta-thinking.net/pricing
