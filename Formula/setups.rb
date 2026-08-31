@@ -1,4 +1,4 @@
-class SetupsCli < Formula
+class Setups < Formula
   desc "Declarative package manager and setup versioning — the Setups CLI"
   homepage "https://setups.meta-thinking.net"
   version "0.1.0"
@@ -30,6 +30,8 @@ class SetupsCli < Formula
         setups plan <id> / apply <id>   # preview and converge, atomically
       Backups need a Setups Disk attached: setups backup
       Tab completion is installed for zsh and bash automatically.
+      The Setups desktop app (macOS) ships separately and can install
+      this CLI itself — one product, one package.
     EOS
   end
 
