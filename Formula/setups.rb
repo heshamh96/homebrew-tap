@@ -6,7 +6,7 @@ class Setups < Formula
   on_macos do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/setups-v#{version}/setups-cli-darwin-arm64.tar.gz"
-      sha256 "8e913b58659da5b5f18aee09b729da15752a6073317bc3c0c26eb37d2f358657"
+      sha256 "7efe3f1e85841353a1478c3863e8dd0aaf3a736cd16c64aba92710045a1bb330"
     end
   end
 
