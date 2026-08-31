@@ -19,14 +19,12 @@ cask "setups" do
 
   caveats <<~EOS
     Setups is ad-hoc signed (Apple notarization is in progress), so the FIRST
-    launch needs a one-time approval:
+    launch needs a one-time approval — run:
 
-      EASIEST — skip the quarantine flag at install time:
-        brew reinstall --cask --no-quarantine setups
+      xattr -dr com.apple.quarantine "/Applications/Setups.app"
 
-      OR after a normal install: open the app once (it will be blocked), then
-        System Settings -> Privacy & Security -> "Open Anyway", or run:
-        xattr -dr com.apple.quarantine "/Applications/Setups.app"
+    or open the app once (it will be blocked), then
+    System Settings -> Privacy & Security -> "Open Anyway".
 
     The powerful optional CLI lives inside the app:
       Settings -> Install CLI  (tab completion included)
