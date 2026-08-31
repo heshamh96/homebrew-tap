@@ -1,8 +1,8 @@
 cask "setups" do
-  version "0.1.1"
+  version "0.1.2"
 
   on_arm do
-    sha256 "e977525bbdd4351dd5d4bd03e2805f0dba6bf09724e0c0dc6e16f4b5edbd382e"
+    sha256 "43426d12e54376d447442ba32844d127034419da8c2a36f8050154ea9d7a7a63"
     url "https://github.com/meta-thinking/homebrew-tap/releases/download/setups-v#{version}/Setups_#{version}_aarch64.app.tar.gz"
   end
 
