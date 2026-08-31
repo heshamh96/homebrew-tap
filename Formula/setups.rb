@@ -1,12 +1,12 @@
 class Setups < Formula
   desc "Declarative package manager and setup versioning — the Setups CLI"
   homepage "https://setups.meta-thinking.net"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_arm do
       url "https://github.com/meta-thinking/homebrew-tap/releases/download/setups-v#{version}/setups-cli-darwin-arm64.tar.gz"
-      sha256 "7efe3f1e85841353a1478c3863e8dd0aaf3a736cd16c64aba92710045a1bb330"
+      sha256 "8c50df10729e0d19545b8c17b804fc1ab6a57ceba7a09e21952acffd98d24bdc"
     end
   end
 
